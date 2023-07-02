@@ -1,0 +1,204 @@
+:root{
+    --primary: #3a3a3a;
+    --primary-dark: #302d2d;
+    --green: #008104;
+    --red: #ff0000;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html{
+    font-family: "poppins", sans-serif;
+}
+
+body{
+    background-color: var(--primary);
+}
+
+.container{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.box{
+    background-color: white;
+    width: 450px;
+    height: 700px;
+    padding: 20px;
+    background-color: var(--primary-dark);
+    color: white;
+    position: absolute;
+}
+
+h1{
+    font-weight: 500;
+    font-size: 32px;
+}
+
+h2{
+    font-weight: 400;
+    font-size: 24px;
+}
+
+h3{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+.box-upper,.balance{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.balance{
+    margin-top: 20px;
+}
+
+.transaction-container{
+    margin-top: 20px;
+}
+
+p{
+    font-size: 14px;
+}
+
+.transactions{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.transaction{
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+.transaction .left{
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status{
+    min-height: 40px;
+    min-width: 40px;
+    display: grid;
+    place-items: center;
+    color: white;
+}
+
+.credit{
+    background-color: var(--green);
+}
+
+.debit{
+    background-color: var(--red);
+}
+
+.transaction-form{
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    color: black;
+    padding: 20px;
+}
+
+.transaction-form h3{
+    margin-bottom: 20px;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-control:first-child{
+    flex: 2;
+}
+
+.inputs{
+    display: flex;
+    gap: 10px;
+}
+
+form input{
+    padding: 10px 15px;
+    outline: 1px solid transparent;
+    border: 1px solid black;
+    width: 100%;
+}
+
+form input:focus-visible{
+    outline: 1px solid var(--primary-dark);
+    border: 1px solid var(--primary-dark);
+}
+
+.button-containers{
+    display: flex;
+    margin-top: 10px;
+    gap: 8px;
+}
+
+.button-containers button{
+    width: 100%;
+    height: 45px;
+    color: white;
+    border: none;
+    opacity: 0.7;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.button-containers button:hover{
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+
+#earnbtn{
+    background-color: var(--green);
+}
+
+#expbtn{
+    background-color: var(--red);
+}
+
+.content{
+    display: flex;
+    cursor: pointer;
+}
+
+.lower{
+    padding: 10px;
+    gap: 10px;
+    display: none;
+}
+
+.showTransaction{
+    display: flex;
+}
+
+.lower img{
+    height: 20px;
+    cursor: pointer;
+}
+
+@media(max-width:500px){
+    .box{
+        width: 95%;
+    }
+}
